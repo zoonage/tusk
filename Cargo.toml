@@ -1,0 +1,31 @@
+[package]
+name = "tusk"
+version = "0.0.1"
+authors = ["Aaron George <aarongeorge@me.com>"]
+edition = "2018"
+license = "MPL-2.0"
+readme = "README.md"
+description = "Tusk is a monitoring agent/server"
+keywords = ["tusk", "monitoring"]
+repository = "https://github.com/icedrift/tusk.git"
+exclude = [".gitignore", ".travis.yml", ".cargo/config", "appveyor.yml"]
+
+[badges]
+travis-ci = { repository = "icedrift/tusk", branch = "master" }
+codecov = { repository = "icedrift/tusk", branch = "master", service = "github" }
+
+[dependencies]
+clap = "2.33.0"
+serde = { version = "1.0.91", features = [ "derive" ] }
+serde_json = "1.0.39"
+serde_yaml = "0.8.9"
+bincode = "1.1.4"
+log = "0.4.6"
+env_logger = "0.6.1"
+actix-web = "0.7.19"
+failure = "0.1.5"
+rand = "0.6.5"
+crossbeam = "0.7.1"
+
+[dev-dependencies]
+criterion = "0.2.11"
